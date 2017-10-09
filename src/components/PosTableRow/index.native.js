@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-native";
 import { StyleSheet, ScrollView, FlatList, Text, View } from "react-native";
 
 const PosTableRow = (props) => {
@@ -14,7 +15,9 @@ const PosTableRow = (props) => {
         <Text style={styles.tableTd1}>{props.goalDifference}</Text>
         <Text style={styles.tableTd1}>{props.playedGames}</Text>
         <Text style={styles.tableTd1}>{props.points}</Text>
-        <Text  style={styles.tableTd1}>+</Text>
+        <View style={styles.tableTd1}>
+          <Link to={`/TeamSquad/${props.teamName}`}><Text>+</Text></Link>
+        </View>
       </View>
     );
 }

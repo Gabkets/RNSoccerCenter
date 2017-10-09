@@ -1,20 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StyleSheet, Text, View } from "react-native";
 
 const Player = props => {
   return (
-    <div className="player-info">
-      <div className="avatar" />
-      <div className="UserInfo-name">
-        {props.name}
-      </div>
-      <div className="UserInfo-name">
-        Position: {props.position}
-      </div>
-      <div className="UserInfo-name">
-        Nationality: {props.nationality}
-      </div>
-    </div>
+    <View>
+        <View>
+          <Text>{props.name}</Text>
+        </View>
+        <View>
+            <Text>Position: {props.position}</Text>
+        </View>
+        <View>
+          <Text>Nationality: {props.nationality}</Text>
+        </View>
+    </View>
   );
 };
 

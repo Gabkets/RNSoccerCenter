@@ -26,6 +26,7 @@ const reducer = (state = initialState, action) => {
         leagueTable: action.payload.leagueTable
       };
     case types.SELECT_TEAM_ID:
+      debugger;
       return {
         ...state,
         selectedTeamId: action.payload.id,
